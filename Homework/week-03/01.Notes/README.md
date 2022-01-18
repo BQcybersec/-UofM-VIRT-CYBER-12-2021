@@ -1,10 +1,11 @@
 Notes: Player Analysis
+
 	-The Losses occurred at the same times every day
-		5am
-		8am
-		2pm
-		8pm
-		11pm
+		-5am
+		-8am
+		-2pm
+		-8pm
+		-11pm
 	-Mylie Schmidt was present each time a loss occured over the course of three days
 	-Mylie was present thirteen times total when losses occured
 	-No Loss occured at 8pm or 11pm on March 15th
