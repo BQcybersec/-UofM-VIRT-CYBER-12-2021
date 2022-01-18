@@ -11,11 +11,13 @@ Notes: Player Analysis
 	-No Loss occured at 8pm or 11pm on March 15th
 
 Notes: Dealer Analysis
+
 	-Billy Jones was the primary dealer of losses for the dates and times in question
 
 	-Billy Jones worked thirteen losses over the three days in question 
 
 Notes: Player_Dealer_Correlation
+
 	-I believe Mylie Schmidt and Billy Jones are colluding to scam Lucky Duck.
 
 	-Both Mylie and Billy were present thirteen times when losses occured for Lucky Duck. 
