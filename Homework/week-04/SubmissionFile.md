@@ -11,7 +11,7 @@ Save and submit the completed file for your homework submission.
 
     - Command to inspect permissions:
     - 
-            `ls -l`
+            ls -l
 
     - Command to set permissions (if needed):
     - 
