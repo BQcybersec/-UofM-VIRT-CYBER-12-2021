@@ -11,11 +11,11 @@ Save and submit the completed file for your homework submission.
 
     - Command to inspect permissions:
     - 
-            ls -l
+            ls -l /etc/shadow
 
     - Command to set permissions (if needed):
     - 
-            chmod
+            sudo chmod 600 /etc/shadow
 
 2. Permissions on `/etc/gshadow` should allow only `root` read and write access.
 
