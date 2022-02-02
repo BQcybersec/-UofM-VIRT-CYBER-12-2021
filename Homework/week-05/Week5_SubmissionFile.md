@@ -187,8 +187,11 @@ This is a command to audit the cron directory, this command will not be persiste
 To make it persistent you need to do these steps:
 
 Step1:    sudo nano /etc/audit/rules.d/audit.rules
+
 Step2:    -w /var/log/cron -p rwxa -k cron_tinkering_audit
+
 Step3:    Save the updated audit.rules file
+
 Step4:    systemstl restart auditd
 
 
