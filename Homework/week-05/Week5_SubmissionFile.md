@@ -121,7 +121,8 @@ sudo nano auth
          delaycompress
          missingok
          endscript
-}
+     }
+ 
     
     ---
 
