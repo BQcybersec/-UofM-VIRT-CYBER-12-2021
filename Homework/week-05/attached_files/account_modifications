@@ -1,0 +1,17 @@
+
+Account Modifications Report
+=================================================
+# date time auid addr term exe acct success event
+=================================================
+1. 01/31/2022 19:26:41 -1 ? ? /usr/sbin/useradd vboxadd no 2297
+2. 01/31/2022 19:26:41 -1 ? ? /usr/sbin/useradd vboxadd no 2298
+3. 01/31/2022 19:26:41 -1 ? ? /usr/sbin/useradd vboxadd no 2303
+4. 01/31/2022 19:26:41 -1 ? ? /usr/sbin/useradd vboxadd no 2304
+5. 02/01/2022 19:57:58 1000 UbuntuDesktop pts/0 /usr/sbin/userdel ? yes 25213
+6. 02/01/2022 19:57:58 1000 UbuntuDesktop pts/0 /usr/sbin/userdel attacker yes 25216
+7. 02/01/2022 19:57:58 1000 UbuntuDesktop pts/0 /usr/sbin/userdel attacker yes 25217
+8. 02/01/2022 19:58:16 1000 UbuntuDesktop pts/0 /usr/sbin/userdel ? yes 26171
+9. 02/01/2022 19:58:16 1000 UbuntuDesktop pts/0 /usr/sbin/userdel attacks_mcgoo yes 26174
+10. 02/01/2022 19:58:16 1000 UbuntuDesktop pts/0 /usr/sbin/userdel attacks_mcgoo yes 26175
+11. 02/01/2022 20:01:57 1000 UbuntuDesktop pts/1 /usr/sbin/useradd attacker yes 26693
+12. 02/01/2022 20:01:57 1000 UbuntuDesktop pts/1 /usr/sbin/useradd ? yes 26697
