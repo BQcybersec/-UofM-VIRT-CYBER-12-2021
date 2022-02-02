@@ -181,7 +181,8 @@ Located in "attached_files"
 8. Command to use `auditd` to watch `/var/log/cron`:
 
 sudo auditctl -w /var/log/cron -p rwxa -k cron_tinkering_audit
-this is a command to audit the cron directory, this command will not be persistent.
+
+This is a command to audit the cron directory, this command will not be persistent.
 
 To make it persistent you need to do these steps:
 
