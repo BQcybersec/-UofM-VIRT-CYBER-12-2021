@@ -122,8 +122,6 @@ sudo nano auth
          missingok
          endscript
      }
- 
-    
     ---
 
 ### Bonus: Check for Policy and File Violations
@@ -172,6 +170,7 @@ sudo nano /etc/audit/rules.d/audit.rules
     sudo auditctl -l
 
 6. Command to produce an audit report:
+    
     sudo aureport -au
 
 7. Create a user with `sudo useradd attacker` and produce an audit report that lists account modifications:
