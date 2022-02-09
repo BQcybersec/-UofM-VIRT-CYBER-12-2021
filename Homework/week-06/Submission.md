@@ -18,22 +18,22 @@ Save and submit the completed file for your homework submission.
 
 3. Give your secret user a system UID < 1000:
   
-    - `nano etc/passwd
+    - `nano etc/passwd`
         
-change UID value to 468`
+       - change UID value to 468`
 
 4. Give your secret user the same GID:
   
    - `nano etc/passwd`
        
- change GID value to 468
+        - change GID value to 468
 
 
 5. Give your secret user full `sudo` access without the need for a password:
    -  
    `nano etc/sudoers`
         
-enter under user pivilege specification
+        -enter under user pivilege specification
             
 `sysd    ALL=(ALL:ALL) NOPASSWRD:ALL `
 
@@ -46,9 +46,9 @@ enter under user pivilege specification
 
 1. Edit the `sshd_config` file:
 
-sshd.config
+`sudo nano /etc/ssh/sshd.config`
 
-uncomment and adjust the line port22
+     - uncomment and adjust the line "port22"
 
     port 2222
     
