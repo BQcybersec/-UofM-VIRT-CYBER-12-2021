@@ -20,7 +20,7 @@ Save and submit the completed file for your homework submission.
   
     - `nano etc/passwd`
         
-       - change UID value to 468`
+       - change UID value to 468
 
 4. Give your secret user the same GID:
   
@@ -80,9 +80,10 @@ Save and submit the completed file for your homework submission.
 
 2. Escalate your privileges to the `root` user. Use John to crack the entire `/etc/shadow` file:
    
-    sudo -s
+    - `sudo -s`
     - `cd /etc
-        john shadow`
+        
+    - `john shadow`
  
 ---
 
