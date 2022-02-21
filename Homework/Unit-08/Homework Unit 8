@@ -1,7 +1,8 @@
-Homework Unit 8 
+Homework Unit 8
 BenQualey
 
 ### **Phase1**: "I'd like to Teach the World to `Ping`"
+
     -Steps:
         -Determine The IP's for the Hollywood Office
             -Servers 16-20 were appropriate for this assignment due to the fact they had "Hollywood" set as their location within the list provided.
@@ -29,8 +30,8 @@ BenQualey
     -Osi Layer
         This would be Layer 3 in the OSI model
 
-
 ### **Phase2**: "Some `Syn` for Nothin`"
+
     -Steps
         -`SYN SCAN`
             `sudo nmap -sS 167.172.144.11`
@@ -48,6 +49,7 @@ BenQualey
         This would be Layer 4 in the OSI model
 
 ### **Phase3**: "I Feel a `DNS` Change Comin' On"
+
     -Steps
         -Access the Server "SSH'd"
             `ssh jimi@167.172.144.11 -p 22`
@@ -69,6 +71,7 @@ BenQualey
         -This would fall under layer 7 of the OSI model
 
 ### **Phase4**: "Sh`ARP` Dressed Man"
+
     -Steps
         In the /etc directory there was a filled called "packetcaptureinfo.txt"
         
@@ -90,5 +93,3 @@ BenQualey
         It looks like Rock Corp will have to close port 22
     -Osi Layer
       I would say this hack entails all 7 Layers of the OSI model.   
-
-
