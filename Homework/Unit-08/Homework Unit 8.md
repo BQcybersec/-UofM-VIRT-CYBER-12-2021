@@ -21,7 +21,7 @@ BenQualey
             -Every other IP address is unreachable
 
     -Vulnerabilities:
-        Without knowing much else I would say that the primary vulnerabilty at this stage is having a lone system on the network that stands out amongst the others, potentially positioning itself as a target for potential hackers. 
+        Without more information I would say that the primary vulnerabilty at this stage is having a lone system on the network that stands out amongst the others; potentially positioning itself as a target for potential hackers. 
 
     -Findings of a Hacker:
         At this phase I do not see any proof of hacking just a possible path a hacker may take. 
@@ -34,7 +34,7 @@ BenQualey
 
     -Steps:
         -`SYN SCAN`
-            `sudo nmap -sS 167.172.144.11`
+            <`sudo nmap -sS 167.172.144.11`>
         -Open Ports
             "22/tcp open ssh"
             The scan reported that port 22 was open.
