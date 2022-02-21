@@ -3,10 +3,10 @@ BenQualey
 
 ### **Phase1**: "I'd like to Teach the World to `Ping`"
 
-    -Steps:
-        -Determine The IP's for the Hollywood Office
-            -Servers 16-20 were appropriate for this assignment due to the fact they had "Hollywood" set as their location within the list provided.
-            -I took the appropriate servers and ran their corresponding IPs through a CIDR to Ip4v tool https://www.ipaddressguide.com/cidr
+-Steps:
+    -Determine The IP's for the Hollywood Office
+        -Servers 16-20 were appropriate for this assignment due to the fact they had "Hollywood" set as their location within the list provided.
+        -I took the appropriate servers and ran their corresponding IPs through a CIDR to Ip4v tool https://www.ipaddressguide.com/cidr
 
         -fping
             -Attached files contains an image of the table I compiled whilst working on this problem and a document of the actual table. 
