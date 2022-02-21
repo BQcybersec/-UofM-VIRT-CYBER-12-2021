@@ -34,7 +34,7 @@ BenQualey
 
     -Steps:
         -`SYN SCAN`
-            <`sudo nmap -sS 167.172.144.11`>
+            `sudo nmap -sS 167.172.144.11`
         -Open Ports
             "22/tcp open ssh"
             The scan reported that port 22 was open.
