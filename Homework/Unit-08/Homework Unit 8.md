@@ -9,8 +9,8 @@ BenQualey
             -I took the appropriate servers and ran their corresponding IPs through a CIDR to Ip4v tool https://www.ipaddressguide.com/cidr
 
         -fping
-            -Attached files contains an image of the table I compiled whilst working on this problem and a document of the actual table. 
-            1.  "`fping -s -g 15.199.95.80 15.199.95.95`"
+            -Attached "01.Fping_Summary"
+            1.  `fping -s -g 15.199.95.80 15.199.95.95`
             2.  `fping -s -g 15.199.94.80 15.199.94.95`
             3.  `fping -s -g 11.199.158.80 11.199.158.95`
             4.  `fping -s 167.172.144.11`
