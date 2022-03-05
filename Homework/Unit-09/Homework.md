@@ -47,6 +47,10 @@ The nslookup for resistance.theforce.net should contain an IP address instead of
 
 ## Mission 4
 
+[DNS for princessleia.site]
+
+To prevent the issue from happening again you would want to create a secondary DNS with a traffic redirection to ns2.galaxybackup.com that becomes operational in the case of the princessleia.site server goes down.
+
 ## Mission 5
 
 ## Mission 6
