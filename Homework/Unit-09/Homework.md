@@ -36,9 +36,9 @@ theforce.net	mail exchange	=	0	lightspeed.rcsntx.sbcglobal.net
 
 ## Mission 3
 
-[CNAME of www.theforce.net]
+[CNAME of www.theforce.net](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-09/Images/04.Mission3(cname).png)
 
-It appears they have taken the derver down for [resistance.theforce.net]
+It appears they have taken the derver down for [resistance.theforce.net](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-09/Images/05.Mission3(serverdown).png)
 
 resistance.theforce.net	canonical name	=	theforce.net
 
