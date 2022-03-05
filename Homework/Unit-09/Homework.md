@@ -47,14 +47,23 @@ The nslookup for resistance.theforce.net should contain an IP address instead of
 
 ## Mission 4
 
-[DNS for princessleia.site]
+[DNS for princessleia.site](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-09/Images/06.Mission4(princessleiaDNS).png)
 
 To prevent the issue from happening again you would want to create a secondary DNS with a traffic redirection to ns2.galaxybackup.com that becomes operational in the case of the princessleia.site server goes down.
 
 ## Mission 5
 
+OSPF: Batau-d1-c2-e1-f1-j1-i1-l6-q4-t2-v2-2jedha
+
 ## Mission 6
+
+[Steps to examine the pcap file]
+
+
+
 
 ## Mission 7
 
+
+[the grand finale]
 
