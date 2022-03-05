@@ -13,11 +13,11 @@ starwars.com	mail exchanger	=	5	asltx.2.google.com
 
 ## Mission 2
 
-[SPF Lookup]
+[SPF Lookup](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-09/Images/02.Mission2(spflookup).png)
 
 The spf would fail in this instance due to the server change. Looking at the primary mail exchanger for the site and then looking up that ip address shows that it doesn’t line up with the IP address that theforce.net is sending it's communications from. This would trigger the spf to fail thus moving the communication into the spam folder.
 
-[IP address of the new server]
+[IP address of the new server](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-09/Images/03.Mission2(addressofnewserver).png)
 
 How it should look to avoid the spam problem.
 
