@@ -57,13 +57,18 @@ OSPF: Batau-d1-c2-e1-f1-j1-i1-l6-q4-t2-v2-2jedha
 
 ## Mission 6
 
-[Steps to examine the pcap file]
+[Steps to examine the pcap file](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-09/Images/07.Mission%206(pcap).png)
 
+1. I used aircrack with the "rockyou" word list to crack the wpa-password
+2. I inputed the password and wifi ssid into wireshark
+3. I did an arp search to find the MAC address and IP address
 
 
 
 ## Mission 7
 
 
-[the grand finale]
+[the grand finale](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-09/Images/08.Mission7(thegrandfinale).png
+
+)
 
