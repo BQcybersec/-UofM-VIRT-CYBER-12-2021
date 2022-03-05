@@ -24,7 +24,9 @@ How it should look to avoid the spam problem.
 nslookup smpt.secureserver.net
 
 non-authoritative answer:
+
 name:	smtp.secureserver.net
+
 address:	45.23.176.21
 
 or
@@ -33,6 +35,15 @@ theforce.net	mail exchange	=	0	lightspeed.rcsntx.sbcglobal.net
 
 
 ## Mission 3
+
+[CNAME of www.theforce.net]
+
+It appears they have taken the derver down for [resistance.theforce.net]
+
+resistance.theforce.net	canonical name	=	theforce.net
+
+The nslookup for resistance.theforce.net should contain an IP address instead of an error code. 
+
 
 ## Mission 4
 
