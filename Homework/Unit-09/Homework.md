@@ -2,7 +2,7 @@
 Ben Qualey
 
 ## Mission 1
-nslookup -type=mx starwars.com
+[nslookup -type=mx starwars.com](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-09/Images/01.Mission1(nslookup).png)
 
 the mail is being directed to alternate locations. the newly set up servers are not recognized within the dns for starwars.com
 
