@@ -458,7 +458,7 @@ Answer the following:
 
 5. List your third-party references.
 
-    Answer: [zbot article](http://f-secure.com/v-descs/trojan-spy_w32_zbot.shtml)
+    Answer: [zbot article](https://f-secure.com/v-descs/trojan-spy_w32_zbot.shtml)
             [virustotal](https://virustotal.com)
 
 ---
