@@ -451,16 +451,15 @@ Answer the following:
 4. What are your recommended mitigation strategies?
 
 
-    Answer: Due to this particular trojan being able to install iteself into other proccesses in the system I would recommend a fresh install of the infected computer from a system image before this attack occured. 
-        I also noticed that the infected computer also attempted to re-install the trojan on 4 other systems after it had been infected. I would recommend a clean system install for those systems as well. The user of the attacked system should also change his passwords to all acounts attached to that computer, and if banking information was gathered on that system have them contact the bank about having their account potentially compromised. 
+    Answer: Due to this particular trojan being able to install itself into other proccesses in the system I would recommend a fresh install of the infected computer from a system image before this attack occured. I also noticed that the infected computer attempted to re-install the trojan on four other systems after it had been infected. I would recommend a clean system install for those systems as well. The user of the attacked system should also change their passwords to all acounts attached to the infected computer, and if banking information was gathered on that system have them contact the bank about having their account potentially compromised. 
 
 
 
 
 5. List your third-party references.
 
-    Answer: [zbot article](f-secure.com/v-descs/trojan-spy_w32_zbot.shtml)
-            [virustotal](virustotal.com)
+    Answer: [zbot article](http://f-secure.com/v-descs/trojan-spy_w32_zbot.shtml)
+            [virustotal](https://virustotal.com)
 
 ---
 
