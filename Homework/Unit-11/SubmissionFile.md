@@ -24,7 +24,7 @@ The concept of defense in depth can be broken down into three different security
 
     Answer:
         IPS: is an active system, and has the ability to prevent known malicious traffic from reaching the protected system
-        IDS: is a passive system that alerts an administrator if it detects malicious activity or traffic
+        IDS: is a passive system that only alerts an administrator if it detects malicious activity or traffic
 
 2. What's the difference between an Indicator of Attack and an Indicator of Compromise?
 
@@ -36,19 +36,20 @@ The concept of defense in depth can be broken down into three different security
 
 Name each of the seven stages for the Cyber Kill chain and provide a brief example of each.
 
+
 1. Stage 1: Reconnaissance: Gathering information about the target, and any potential vulnerabilities in their network or system. 
 
-2. Stage 2: Weaponization: Creating a weapon that is customized based on the information gathered from the Reconnaissance stage.
+2. Stage 2: Weaponization: Creating a weapon (malware, virus) that is customized based on the information gathered from the Reconnaissance stage.
 
-3. Stage 3: Delivery: This  is the stage where the weapon is transmitted to the target. 
+3. Stage 3: Delivery: This is the stage where the weapon is transmitted to the target. 
 
-4. Stage 4: Exploitation: The Malware is triggered to exploit the target weakness
+4. Stage 4: Exploitation: The Malware is triggered to exploit the targets vulnerabilities.
 
-5. Stage 5: Installation: The weapon is installed on the targets system
+5. Stage 5: Installation: The weapon is installed on the targets system.
 
-6. Stage 6: Command and Control: the weapon is used to control or manipulate the target remotely by the attacker
+6. Stage 6: Command and Control: The weapon is used to control or manipulate the target remotely by the attacker.
 
-7. Stage 7: Actions on Objectives: this where the weapon delivers the goal set out by the attacker. 
+7. Stage 7: Actions on Objectives: This where the weapon delivers the goal set out by the attacker. 
 
 
 #### Snort Rule Analysis
@@ -61,7 +62,7 @@ Snort Rule #1
 alert tcp $EXTERNAL_NET any -> $HOME_NET 5800:5820 (msg:"ET SCAN Potential VNC Scan 5800-5820"; flags:S,12; threshold: type both, track by_src, count 5, seconds 60; reference:url,doc.emergingthreats.net/2002910; classtype:attempted-recon; sid:2002910; rev:5; metadata:created_at 2010_07_30, updated_at 2010_07_30;)
 ```
 
-1. Break down the Sort Rule header and explain what is happening.
+1. Break down the Snort Rule header and explain what is happening.
 
    Answer: This is a snort rule to document and alert the snort user of any external network attempting to scan ports between 5800 - 5820
 
@@ -89,7 +90,7 @@ alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET POLICY PE EXE or D
 
 3. What kind of attack is indicated?
 
-   Answer: Malware, trying to load on the system.
+   Answer: Malware, trying to load onto the system.
 
 Snort Rule #3
 
@@ -425,7 +426,7 @@ Answer the following:
 1. What was the indicator of an attack?
    - Hint: What do the details of the reveal? 
 
-    Answer:  A snort rule triggered an alert about downloading an EXE payload. I determined the system compromised when I saw that the source IP also had a singular instance as the destination IP (possibly as a way of phoneing home) There was a questionable file associated with the alert and when I loaded the file into a virus scanner it was known by several vendors and they said it was a viariant of the "Zbot"
+    Answer:  A snort rule triggered an alert about downloading an EXE payload. I determined the system compromised when I saw that the source IP also had a singular instance as the destination IP (possibly as a way of phoning home) There was a questionable file associated with the alert and when I loaded the file into a virus scanner it was known by several vendors and they said it was a viariant of the "Zbot"
 
 
 2. What was the adversarial motivation (purpose of attack)?
@@ -441,22 +442,22 @@ Answer the following:
 | **Delivery** |    How was it downloaded?| The file communicated back to a remote server and downloaded the trojan
 | **Exploitation** |  What does the exploit do?| It loads into the the system32 folder and places two .dll files that it uses to store information from the infected system.  
 | **Installation** | How is the exploit installed?|If it can proceed it will then amend registry keys to enable it's execution at startup and inject itself into other processes 
-| **Command & Control (C2)** | How does the attacker gain control of the remote machine?|the Tojan will proceed to harvest data from the host machine, depending on the particular Zbot it could be capable of a range of things, such as redirecting to sites it defines, keylogging the infected computer, presenting fake web pages (controlled by the hacker) in attempts to gather information any information it can. Historically this type of bot has been written to gather banking information. 
+| **Command & Control (C2)** | How does the attacker gain control of the remote machine?|The trojan will proceed to harvest data from the host machine. Depending on the particular Zbot it could be capable of a range of things, such as: redirecting to sites it defines, keylogging the infected computer, or presenting fake web pages (controlled by the hacker) in attempts to gather information. Historically this type of bot has been written to gather banking information. 
 | **Actions on Objectives** | What does the software that the attacker sent do to complete it's tasks?|The bot will proceed to send the collected data back to a server defined by the trojans author. 
 
 
     Answer: 
 
 
-4. What are your recommended mitigation strategies?
+1. What are your recommended mitigation strategies?
 
 
-    Answer: Due to this particular trojan being able to install itself into other proccesses in the system I would recommend a fresh install of the infected computer from a system image before this attack occured. I also noticed that the infected computer attempted to re-install the trojan on four other systems after it had been infected. I would recommend a clean system install for those systems as well. The user of the attacked system should also change their passwords to all acounts attached to the infected computer, and if banking information was gathered on that system have them contact the bank about having their account potentially compromised. 
+    Answer: Due to this particular trojan being able to install itself into other proccesses in the system I would recommend a fresh install of the infected computer from a system image pre-dating when this attack occured. I also noticed that the infected computer attempted to re-install the trojan on four other systems after it had been infected. I would recommend a clean system install for those systems as well. The user of the attacked system should also change their passwords to all accounts attached to the infected computer, and if banking information was gathered on that system have them contact the bank about having their account potentially compromised. Phishing training may also be needed to prevent future attacks.
 
 
 
 
-5. List your third-party references.
+2. List your third-party references.
 
     Answer: [zbot article](https://f-secure.com/v-descs/trojan-spy_w32_zbot.shtml)
             [virustotal](https://virustotal.com)
