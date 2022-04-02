@@ -108,10 +108,10 @@ These Beats allow us to collect the following information from each machine:
   -Filebeat Collects: Syslog files, Sudo commands, SSH Logins, and New Users and Groups.
     This data can give a very good overview if the system has been compromised, attacked or is operating as intended. When looking at this data I would expect to see data from the Jump-Box provisioning the containers and a handful of operations that were used to test the system. Anything unexplained would show the possibility of being compromised. 
 
-    ![syslog](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.syslog_filebeat.png)
-    ![sudo commands](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.Sudo_Commands_Filebeat.png)
-    ![SSH](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.SSH_Logins_Filebeat.png)
-    ![New Users and Groups](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.new_users_groups_filebeat.png)
+![syslog](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.syslog_filebeat.png)
+![sudo commands](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.Sudo_Commands_Filebeat.png)
+![SSH](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.SSH_Logins_Filebeat.png)
+![New Users and Groups](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.new_users_groups_filebeat.png)
 
   
   
