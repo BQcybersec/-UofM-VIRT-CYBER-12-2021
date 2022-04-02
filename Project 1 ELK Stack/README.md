@@ -35,11 +35,11 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 - What does Filebeat watch for?
   
-  -Log Files
+  - Log Files
 
 - What does Metricbeat record?
   
-  -System Metrics
+  - System Metrics
 
 The configuration details of each machine may be found below.
 
@@ -63,7 +63,7 @@ Only the Jump-Box machine can accept connections from the Internet. Access to th
 
 - Which machine did you allow to access your ELK VM? What was its IP address?
 
-  -Access to the ELK virtual machine is done through the Jump box.
+- Access to the ELK virtual machine is done through the Jump box.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -119,8 +119,8 @@ These Beats allow us to collect the following information from each machine:
   -Metricbeat collects: CPU usage, Load, Memory Usage and Network traffic for all three webmachines. When looking at the data I would expect a corelation with traffic to the individual machine. If one machine is performing a task I would expect to see the CPU usage increase. If I connect to the machine via Jump box or the DVWA application I expect to see a bump in network traffic. This is useful data to get a quick system overview without having to log into the machine itself to see how the hardware is behaving.  
   
 ![metricbeat overview](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/03.Metricbeat_overview.png)
-![Inventory Monitored]()
-![Individual System Overview]()
+![Inventory Monitored](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/03.Inventory_Monitored_metricbeat.png)
+![Individual System Overview](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/03.Individual_System_Overview_Metricbeat.png)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -128,21 +128,19 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
   -Copy the playbook file to /etc/ansible
   - Update the ansible_config file to include the username you created when you set up the machine. 
-  -Update the Host File to include the machines you wish to run the playbook on
-  -Run the playbook, and SSH to the machine it was installed on to check that the installation worked as expected.
-  -`sudo docker ps`
-    -Will give a brief summary of the containers that are installed.
+  - Update the Host File to include the machines you wish to run the playbook on
+  - Run the playbook, and SSH to the machine it was installed on to check that the installation worked as expected.
+  - `sudo docker ps` Will give a brief summary of the containers that are installed.
 
 
-_TODO: Answer the following questions to fill in the blanks:_
--Which file is the playbook? Where do you copy it?_
+- Which file is the playbook? Where do you copy it?_
   - install_elk.yml is the playbook itself and I stored it within the Ansible folder on the Linux machine /etc/ansible
 
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-  -hosts
-  -You place servers into different categories the categories are referenced within the playbooks themselves. For this install I used two categories "webservers" and "ELK" in each of the categories I pointed the host file to the desired machines private IP address and had diffenrent playbooks for each type of server. 
+  Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+  - hosts
+  - You place servers into different categories the categories are referenced within the playbooks themselves. For this install I used two categories "webservers" and "ELK" in each of the categories I pointed the host file to the desired machines private IP address and had diffenrent playbooks for each type of server. 
 
-- _Which URL do you navigate to in order to check that the ELK server is running?
+  Which URL do you navigate to in order to check that the ELK server is running?_
 http://13.66.156.191:5601/app/kibana
 
 
