@@ -105,40 +105,46 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
   
-  -Filebeat Collects: Syslog files, Sudo commands, SSH Logins, and New Users and Groups.
+  Filebeat Collects: Syslog files, Sudo commands, SSH Logins, and New Users and Groups.
     This data can give a very good overview if the system has been compromised, attacked or is operating as intended. When looking at this data I would expect to see data from the Jump-Box provisioning the containers and a handful of operations that were used to test the system. Anything unexplained would show the possibility of being compromised. 
-
+### Filebeat syslog overview
 ![syslog](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.syslog_filebeat.png)
+### Filebeat sudo commands data
 ![sudo commands](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.Sudo_Commands_Filebeat.png)
+### Filebeat SSH login attempt data
 ![SSH](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.SSH_Logins_Filebeat.png)
+### Filebeat New Users and Groups data
 ![New Users and Groups](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.new_users_groups_filebeat.png)
 
   
   
 
-  -Metricbeat collects: CPU usage, Load, Memory Usage and Network traffic for all three webmachines. When looking at the data I would expect a corelation with traffic to the individual machine. If one machine is performing a task I would expect to see the CPU usage increase. If I connect to the machine via Jump box or the DVWA application I expect to see a bump in network traffic. This is useful data to get a quick system overview without having to log into the machine itself to see how the hardware is behaving.  
-  
+  Metricbeat collects: CPU usage, Load, Memory Usage and Network traffic for all three webmachines. When looking at the data I would expect a corelation with traffic to the individual machine. If one machine is performing a task I would expect to see the CPU usage increase. If I connect to the machine via Jump box or the DVWA application I expect to see a bump in network traffic. This is useful data to get a quick system overview without having to log into the machine itself to see how the hardware is behaving.  
+
+### Metricbeat Overview  
 ![metricbeat overview](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/03.Metricbeat_overview.png)
+### Metricbeat Inventory monitored
 ![Inventory Monitored](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/03.Inventory_Monitored_metricbeat.png)
+### Metricbeat Individual systems monitored
 ![Individual System Overview](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/03.Individual_System_Overview_Metricbeat.png)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-  -Copy the playbook file to /etc/ansible
+  - Copy the playbook file to /etc/ansible
   - Update the ansible_config file to include the username you created when you set up the machine. 
   - Update the Host File to include the machines you wish to run the playbook on
   - Run the playbook, and SSH to the machine it was installed on to check that the installation worked as expected.
   - `sudo docker ps` Will give a brief summary of the containers that are installed.
 
 
-- Which file is the playbook? Where do you copy it?_
-  - install_elk.yml is the playbook itself and I stored it within the Ansible folder on the Linux machine /etc/ansible
+- Which file is the playbook? Where do you copy it?
+  - [install_elk.yml](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Ansible%20Scripts/install_elk.yml) is the playbook itself and I stored it within the Ansible folder on the Linux machine /etc/ansible
 
 Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
   - hosts
-  - You place servers into different categories the categories are referenced within the playbooks themselves. For this install I used two categories "webservers" and "ELK" in each of the categories I pointed the host file to the desired machines private IP address and had diffenrent playbooks for each type of server. 
+  - You place servers into different categories, the categories are referenced within the playbooks themselves. For this install I used two categories "webservers" and "ELK". In each of the categories I pointed the host file to the desired machines private IP address and had diffenrent playbooks for each type of server. 
 
 Which URL do you navigate to in order to check that the ELK server is running?
 
