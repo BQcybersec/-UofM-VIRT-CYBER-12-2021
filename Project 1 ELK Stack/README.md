@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible scripts may be used to install only certain pieces of it, such as Filebeat.
 
-Folder Link["Ansible Scripts"](Ansible Scripts)
+["Ansible Scripts"](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/tree/main/Project%201%20ELK%20Stack/Ansible%20Scripts)
 
 This document contains the following details:
 - Description of the Topology
@@ -25,7 +25,7 @@ Load balancing ensures that the application will be highly available, in additio
 
 - What aspect of security do load balancers protect? 
 
-  - The Load Balancer aids in the availability aspect of this setup in case one or more of the machines go down for any reason. If a machine goes down it can divert the traffic to a different machine that is still operational, maintaining application availability. It also keeps the web machines from having an individual public IP address, since they all share the Load Balancers IP it reduces the potential attack surface. 
+  - The Load Balancer aids in the availability aspect of this setup in case one or more of the machines go down for any reason. If a machine goes down the load balancer can divert the traffic to a different machine that is still operational, maintaining application availability. It also keeps the web machines from having an individual public IP address, since they all share the Load Balancers IP it reduces the potential attack surface. 
 
 - What is the advantage of a jump box?
 
@@ -33,10 +33,12 @@ Load balancing ensures that the application will be highly available, in additio
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system performence.
 
-- What does Filebeat watch for?_
-  - -Log Files
+- What does Filebeat watch for?
+  
+  -Log Files
 
-- What does Metricbeat record?_
+- What does Metricbeat record?
+  
   -System Metrics
 
 The configuration details of each machine may be found below.
@@ -57,9 +59,9 @@ Only the Jump-Box machine can accept connections from the Internet. Access to th
 
 - My workstations public IP Is the only whitelisted IP with access permission to the Jump-Box. 
 
-  -Machines within the network can only be accessed by the Jump-Box.
+- Machines within the network can only be accessed by the Jump-Box.
 
--Which machine did you allow to access your ELK VM? What was its IP address?
+- Which machine did you allow to access your ELK VM? What was its IP address?
 
   -Access to the ELK virtual machine is done through the Jump box.
 
@@ -76,46 +78,47 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
- The main advantages of using Ansible to configure a system are it's speed and simplicity. Writing a playbook for Ansible is not too complicated, the language is human readable and powerful. The speed aspect comes once the script is completed because it can be deployed with a single command and you will have a system that is configured to your needs.
+ The main advantages of using Ansible to configure a system are it's speed and simplicity. Writing a playbook for Ansible is not too complicated; the language is human readable and powerful. The speed aspect comes once the script is completed because it can be deployed with a single command and you will have a system that is configured to your needs.
 
 The playbook implements the following tasks:
 
-  -Install docker.io
-  -Install Python
-  -Download and Launch the ELK container
+  - Install docker.io
+  - Install Python
+  - Download and Launch the ELK container
 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-![docker ps](images/sudo_docker_ps_ss.png)
+![docker ps](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/01.sudo_docker_ps_ss.png)
 
 ### Target Machines & Beats
 
 This ELK server is configured to monitor the following machines:
-  -Web-1 10.0.0.5
-  -Web-2 10.0.0.6
-  -Web-3 10.0.0.7
+
+  - Web-1 10.0.0.5
+  - Web-2 10.0.0.6
+  - Web-3 10.0.0.7
 
 We have installed the following Beats on these machines:
 
--Filebeat
--Metricbeat
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
   
-  -Filebeat Collects Syslog files, Sudo commands, SSH Logins, and New Users and Groups.
+  -Filebeat Collects: Syslog files, Sudo commands, SSH Logins, and New Users and Groups.
     This data can give a very good overview if the system has been compromised, attacked or is operating as intended. When looking at this data I would expect to see data from the Jump-Box provisioning the containers and a handful of operations that were used to test the system. Anything unexplained would show the possibility of being compromised. 
 
-    ![syslog]()
-    ![sudo commands]()
-    ![SSH]()
-    ![New Users and Groups]()
+    ![syslog](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.syslog_filebeat.png)
+    ![sudo commands](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.Sudo_Commands_Filebeat.png)
+    ![SSH](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.SSH_Logins_Filebeat.png)
+    ![New Users and Groups](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/02.new_users_groups_filebeat.png)
 
   
   
 
   -Metricbeat collects: CPU usage, Load, Memory Usage and Network traffic for all three webmachines. When looking at the data I would expect a corelation with traffic to the individual machine. If one machine is performing a task I would expect to see the CPU usage increase. If I connect to the machine via Jump box or the DVWA application I expect to see a bump in network traffic. This is useful data to get a quick system overview without having to log into the machine itself to see how the hardware is behaving.  
   
-![metricbeat overview]()
+![metricbeat overview](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Images/03.Metricbeat_overview.png)
 ![Inventory Monitored]()
 ![Individual System Overview]()
 
