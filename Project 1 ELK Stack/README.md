@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Elk Stack Diagram]())
+![Elk Stack Diagram](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Network%20Diagrams/RedElkDiagram.jpg)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible scripts may be used to install only certain pieces of it, such as Filebeat.
 
@@ -136,11 +136,12 @@ SSH into the control node and follow the steps below:
 - Which file is the playbook? Where do you copy it?_
   - install_elk.yml is the playbook itself and I stored it within the Ansible folder on the Linux machine /etc/ansible
 
-  Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
   - hosts
   - You place servers into different categories the categories are referenced within the playbooks themselves. For this install I used two categories "webservers" and "ELK" in each of the categories I pointed the host file to the desired machines private IP address and had diffenrent playbooks for each type of server. 
 
-  Which URL do you navigate to in order to check that the ELK server is running?_
+Which URL do you navigate to in order to check that the ELK server is running?
+
 http://13.66.156.191:5601/app/kibana
 
 
