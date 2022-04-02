@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Elk Stack Diagram](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%201%20ELK%20Stack/Network%20Diagrams/RedElkDiagram1(Draft)%20(1).jpg?raw=true)
+![Elk Stack Diagram]())
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible scripts may be used to install only certain pieces of it, such as Filebeat.
 
