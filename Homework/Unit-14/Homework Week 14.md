@@ -66,8 +66,11 @@
     - 3
 - Question: Is it obvious that we can access the Dashboard?
     - Yes, the HTML returned from the page looks to be the dashboard for the site
+    - `curl --cookie-jar ./ryancookies.txt --form "log=Ryan" --form "pwd=123456" http://localhost:8080/wp-login.php --verbose`
 - Question: Does any of the wording seem familiar? 
     - Yes, after using grep it removes a lot of the HTML and you see text that is displayed on the site itself
-        -Such as: "Welcome to your WordPress Dashboard!"
+        - Such as: "Welcome to your WordPress Dashboard!"
+        - `curl --cookie ./ryancookies.txt http://localhost:8080/wp-admin/index.php |grep Dashboard`
 - Question: What Happens this time?
     - I get an error because Ryan doesn't have permission to browse the user page. 
+    - `curl --cookie ./ryancookies.txt http://localhost:8080/wp-admin/users.php`
