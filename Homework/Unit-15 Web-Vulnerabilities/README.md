@@ -1,10 +1,10 @@
-### Homework Unit 15 Web-Vulnerabilities and Hardening
+## Homework Unit 15 Web-Vulnerabilities and Hardening
 
-#### Web Application 1: You Wish is My Command Injection
+### Web Application 1: You Wish is My Command Injection
 
 ![DVWA](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/1.1%20DVWA.png)
 
-##### Steps to set up:
+#### Steps to set up:
 
 Command to clear out all the docker containers that were not running
 
@@ -13,6 +13,7 @@ Command to clear out all the docker containers that were not running
 Close out of apache2 and nginx so there woult be any conflicts with ports. 
 
 `systemctl stop apache2`
+
 `systemctl stop nginx`
 
 Load up the docker file with DVWA and bWAAP
@@ -21,7 +22,7 @@ Load up the docker file with DVWA and bWAAP
 
 In a Browser navigate to http://192.168.13.25/vulnerabilities/exec/
 
-##### Walkthrough:
+#### Walkthrough:
 
 Test Pings
 
@@ -34,71 +35,73 @@ Testing a Command Injection
 ![Testing a Command Injection](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/1.3%20CommandInjectionTest.png)
 
 
-Task:
+#### Task:
+
 `8.8.8.8 && cat ../../../../../etc/passwd` 
 
 `8.8.8.8 && cat ../../../../../etc/hosts` 
 
 ----------------------
 
-Proof of Exploit:
+#### Proof of Exploit:
 
 ![etc/passwd](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/1.4passwd.png)
 ![etc/hosts](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/1.5Hosts.png)
 
 
-Mitigation Strategy:
+#### Mitigation Strategy:
 
 Whitelist approved characters for the applications input. IP addresses do not need all letters and symbols.
 
-#### Web Application 2: A Brute Force to Be Reckoned With
+### Web Application 2: A Brute Force to Be Reckoned With
 
 ![bWAAP](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.01%20bWAPP.png)
 
-##### Steps to set up:
+#### Steps to set up:
 
-With the Docker already running  from the previous step
-
-navigate to http://192.168.13.35/install.php
+With the Docker already running  from the previous step, navigate to http://192.168.13.35/install.php
 
 click install
 
 Click Login
+
 	`-Login: bee`
+
 	`-password: bug`
 
 Navigate to "Broken Authentication - Insecure Login Forms"
 
 or http://192.168.13.35/ba_insecure_login_1.php
 
-Activte FoxyProxy and enable Burp
+Activate FoxyProxy and enable Burp
 
 ![foxyproxy](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.02foxyproxy.png)
 
 
 Load Up Burp Suite
 
-![burp](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.03Burpsuite.png)
-
 Click icon in the Applications menu
 
-alternatively you can use the command `sudo burpsuite` from a terminal
+![burp](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.03Burpsuite.png)
 
-start a new temporary project
 
-click on the `proxy` tab
+Alternatively you can use the command `sudo burpsuite` from the terminal
 
-ensure that `intercept is on` is selected
+Start a new temporary project
 
-Reload the bwapp page in the browser
+Click on the `proxy` tab
+
+Ensure that `intercept is on` is selected
+
+Reload the bWAPP page in the browser
 
 ![burp Intercept](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.04BurpIntercept.png)
 
-Go back into burp to find the HTML waiting to be forwarded
+Go back into Burp to find the HTML waiting to be forwarded
 
-click `forward` in burp suite
+Click `forward` in Burp Suite
 
-It looks like burp is intercepting traffic and should be good to go. 
+It looks like Burp is intercepting traffic and should be good to go. 
 
 #### Walkthrough:
 
@@ -120,7 +123,7 @@ Highlight "bee" and click add
 
 Highlight "bug" and click add
 
-This will add two payloads to test with burp, the login and password fields.
+This will add two payloads to test with Burp, the login and password fields.
 
 ![update payloads](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.08updatedpayloads.png)
 
@@ -134,20 +137,21 @@ There should be two variables that have been set up prior that are the Login and
 
 Add the corresponding lists to each payload set. 
 
-Payload 1 Login:
+
+##### Payload 1 Login:
 
 "listofadmins.txt"
 
 ![admins](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.09.listofadminspayload.png)
 
-Payload 2 Password:
+##### Payload 2 Password:
 
 "breached_passwords.txt"
 
 ![passwords](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.10.breachedpasswords.png)
 ----------------------
 
-start the attack
+Start the attack
 
 ![attack running](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.11running%20the%20lists.png)
 
@@ -166,7 +170,7 @@ One entry came back with a larger length indicating that something was different
 
 Increasing Password complexity would force "tonystark" to get a better password. 
 
-two-factor authentication and limiting the amount of login attempts  for a given period of time would help reduce the risks from a brute force attack such as this. 
+Two-factor authentication and limiting the amount of login attempts  for a given period of time would help reduce the risks from a brute force attack such as this. 
 
 
 #### Web Application 3: Wheres the BeEF?
@@ -181,22 +185,23 @@ In a browser travel to http://127.0.0.1:3000/ui/authentication
 	-sername `beef`
 	-Password `feeb`
 
-Loadup the sample webpage
+Load the sample webpage
 
 ![beef connection](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.2beefconnection.png)
 
-the browser is now hooked
+The browser is now hooked
 
-select the browser and navigate to the commands tab
+Select the browser and navigate to the commands tab
 
 ![beef command menu](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.3beefcommands.png)
 
-Now that it is confirmed Beef is operating delete the connection to test DVWA
+Now that it is confirmed BeEF is operating, delete the connection to test DVWA
 
 
 
 
-Walkthrough:
+#### Walkthrough:
+
 ![DVWA XSS](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.4dvwaXSS%20screen.png)
 
 ![DVWA XSS character Limit](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.5DVWAcharacterlimit.png)
@@ -211,8 +216,8 @@ It appears to have  a "max length" for this field
 
 Adjust the parameter to 100
 
-![element modification](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.7elementmodification.png
-)
+![element modification](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.7elementmodification.png)
+
 This will allow the script to fit into the field
 
 ![Submission Command](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.8XSScommand.png)
@@ -226,7 +231,7 @@ Great Success, BeEF has now infected the browser.
 
 ### Task and Proof of Exploit:
 
-Social Engineerin >>Pretty Theft in action
+Social Engineering >> Pretty Theft in action
 
 ![Pretty Theft](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.10PrettyTheft.png)
 
@@ -243,6 +248,6 @@ Result of a risky click
 ![Result Fake Notification Bar](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.13NotificationBarResult.png)
 
 ----------------------
-####Mitigation Strategy:
+#### Mitigation Strategy:
 
-Best practice may be simply not allowing HTML to be injected into submission fields. 
+Best practice may be simply not allowing HTML to be injected into submission fields.. 
