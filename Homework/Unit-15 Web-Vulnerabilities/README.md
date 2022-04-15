@@ -2,7 +2,7 @@
 
 #### Web Application 1: You Wish is My Command Injection
 
-![DVWA]([1.1DVWA](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/1.1%20DVWA.png)
+![DVWA](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/1.1%20DVWA.png)
 
 ##### Steps to set up:
 
