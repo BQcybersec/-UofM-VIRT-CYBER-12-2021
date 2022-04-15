@@ -1,10 +1,10 @@
-## Homework Unit 15 Web-Vulnerabilities and Hardening
+# Homework Unit 15 Web-Vulnerabilities and Hardening
 
-### Web Application 1: You Wish is My Command Injection
+## Web Application 1: You Wish is My Command Injection
 
 ![DVWA](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/1.1%20DVWA.png)
 
-#### Steps to set up:
+### Steps to set up:
 
 Command to clear out all the docker containers that were not running
 
@@ -22,7 +22,7 @@ Load up the docker file with DVWA and bWAAP
 
 In a Browser navigate to http://192.168.13.25/vulnerabilities/exec/
 
-#### Walkthrough:
+### Walkthrough:
 
 Test Pings
 
@@ -35,29 +35,29 @@ Testing a Command Injection
 ![Testing a Command Injection](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/1.3%20CommandInjectionTest.png)
 
 
-#### Task:
+### Task:
 
-	- `8.8.8.8 && cat ../../../../../etc/passwd` 
+	 `8.8.8.8 && cat ../../../../../etc/passwd` 
 
-	- `8.8.8.8 && cat ../../../../../etc/hosts` 
+	 `8.8.8.8 && cat ../../../../../etc/hosts` 
 
 ----------------------
 
-#### Proof of Exploit:
+### Proof of Exploit:
 
 ![etc/passwd](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/1.4passwd.png)
 ![etc/hosts](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/1.5Hosts.png)
 
 
-#### Mitigation Strategy:
+### Mitigation Strategy:
 
 Whitelist approved characters for the applications input. IP addresses do not need all letters and symbols.
 
-### Web Application 2: A Brute Force to Be Reckoned With
+## Web Application 2: A Brute Force to Be Reckoned With
 
 ![bWAAP](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.01%20bWAPP.png)
 
-#### Steps to set up:
+### Steps to set up:
 
 With the Docker already running  from the previous step, navigate to http://192.168.13.35/install.php
 
@@ -65,9 +65,9 @@ Click install
 
 Click Login:
 
-	`- Login: bee`
+	`Login: bee`
 
-	`- password: bug`
+	`password: bug`
 
 Navigate to "Broken Authentication - Insecure Login Forms"
 
@@ -103,7 +103,7 @@ Click `forward` in Burp Suite
 
 It looks like Burp is intercepting traffic and should be good to go. 
 
-#### Walkthrough:
+### Walkthrough:
 
 Find the intercepted html from the bWAPP request, right click it and `send to Intruder`
 
@@ -117,6 +117,8 @@ Select `positions`
 
 ![Positions](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.07PayloadPositions.png)
 
+Select `Cluster Bomb` as the attack type.
+
 `clear`
 
 Highlight "bee" and click add
@@ -125,9 +127,11 @@ Highlight "bug" and click add
 
 This will add two payloads to test with Burp, the login and password fields.
 
+
+
 ![update payloads](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.08updatedpayloads.png)
 
-#### Task:
+### Task:
 
 With the payloads configured now it is time to test our the lists: 
 
@@ -138,13 +142,13 @@ There should be two variables that have been set up prior that are the Login and
 Add the corresponding lists to each payload set. 
 
 
-##### Payload 1 Login:
+#### Payload 1 Login:
 
 "listofadmins.txt"
 
 ![admins](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.09.listofadminspayload.png)
 
-##### Payload 2 Password:
+#### Payload 2 Password:
 
 "breached_passwords.txt"
 
@@ -157,7 +161,7 @@ Start the attack
 
 Burp suite is now running every password / login combo from the lists that were inputed.
 
-#### Proof of Exploit:
+### Proof of Exploit:
 
 One entry came back with a larger length indicating that something was different with this attempt.
 
@@ -166,23 +170,23 @@ One entry came back with a larger length indicating that something was different
 ![HTML](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/2.13HtmlResponse.png)
 
 
-#### Mitigation Strategy:
+### Mitigation Strategy:
 
 Increasing Password complexity would force "tonystark" to get a better password. 
 
 Two-factor authentication and limiting the amount of login attempts  for a given period of time would help reduce the risks from a brute force attack such as this. 
 
 
-#### Web Application 3: Wheres the BeEF?
+## Web Application 3: Wheres the BeEF?
 
 ![BeEF](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.1%20BeEF.png)
 
-Steps: Setting up ____
+### Steps to set up:
 
 In terminal `sudo beef`
 
 In a browser travel to http://127.0.0.1:3000/ui/authentication
-	-sername `beef`
+	-username `beef`
 	-Password `feeb`
 
 Load the sample webpage
@@ -200,7 +204,7 @@ Now that it is confirmed BeEF is operating, delete the connection to test DVWA
 
 
 
-#### Walkthrough:
+### Walkthrough:
 
 ![DVWA XSS](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.4dvwaXSS%20screen.png)
 
@@ -212,7 +216,7 @@ Right click the "message" field and select "inspect element"
 
 ![Inspect the Element](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.6inspect%20the%20element.png)
 
-It appears to have  a "max length" for this field
+It appears to have  a "max length" of 50 characters for this field
 
 Adjust the parameter to 100
 
@@ -224,7 +228,7 @@ This will allow the script to fit into the field
 
 ![BeEF Connection](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.9BeEFConnection.png)
 
-Great Success, BeEF has now infected the browser. 
+Great Success, BeEF has now infected the browser through Stored Cross Site Scripting. 
 
 
 
@@ -248,6 +252,6 @@ Result of a risky click
 ![Result Fake Notification Bar](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/3.13NotificationBarResult.png)
 
 ----------------------
-#### Mitigation Strategy:
+### Mitigation Strategy:
 
-Best practice may be simply not allowing HTML to be injected into submission fields.. 
+Best practice may be simply not allowing HTML to be injected into submission fields.
