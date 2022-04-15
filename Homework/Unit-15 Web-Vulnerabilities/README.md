@@ -37,9 +37,9 @@ Testing a Command Injection
 
 #### Task:
 
-`8.8.8.8 && cat ../../../../../etc/passwd` 
+	- `8.8.8.8 && cat ../../../../../etc/passwd` 
 
-`8.8.8.8 && cat ../../../../../etc/hosts` 
+	- `8.8.8.8 && cat ../../../../../etc/hosts` 
 
 ----------------------
 
@@ -61,13 +61,13 @@ Whitelist approved characters for the applications input. IP addresses do not ne
 
 With the Docker already running  from the previous step, navigate to http://192.168.13.35/install.php
 
-click install
+Click install
 
-Click Login
+Click Login:
 
-	`-Login: bee`
+	`- Login: bee`
 
-	`-password: bug`
+	`- password: bug`
 
 Navigate to "Broken Authentication - Insecure Login Forms"
 
