@@ -43,6 +43,10 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
 
 ![Open Ports](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-16%20Penetration%20Testing/Images/02.open_ports.png)
 
+Their server runs Apache-Coyote/1.1
+
+
+
 #### Step 4: Recon-ng
 
 - Install the Recon module `xssed`. 
@@ -56,9 +60,10 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
 
 Is Altoro Mutual vulnerable to XSS: 
 
-Yes
+
 ![Altoro Mutual Vulnerability](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-16%20Penetration%20Testing/Images/06.Altoro%20Vulnerability.png)
 
+Yes
 
 
 ### Step 5: Zenmap
@@ -75,22 +80,22 @@ Your client has asked that you help identify any vulnerabilities with their file
 
 - Zenmap vulnerability script command: 
 
-`nmap -T4 -A -v --script ftp-vsftpd-backdoor 192.168.0.10
+`nmap -T4 -A -v --script ftp-vsftpd-backdoor 192.168.0.10`
 
 - Once you have identified this vulnerability, answer the following questions for your client:
   1. What is the vulnerability:
   
-  - CVE-2011-2523 contains a backdoor which opens a shell on port 6200
+        - CVE-2011-2523 contains a backdoor which opens a shell on port 6200
 
   2. Why is it dangerous:
 
-    - If someone used the backdoor they would have a shell in the server where they could execute commands and access your data. 
+       - If someone used the backdoor they would have a shell in the server where they could execute commands and access your data. 
 
     ![Danger Score](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-16%20Penetration%20Testing/Images/07.DangerScore.png)
 
   3. What mitigation strategies can you recommendations for the client to protect their server:
 
-  -I would recommend to the client that they should update the OS and Vsftpd version
+       -I would recommend to the client that they should update the OS and Vsftpd version
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
