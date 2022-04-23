@@ -9,7 +9,7 @@ Yes, the Chief Executive Officer is Karl Fitzgerald
 
 `demo.testfire.net: Altoro Mutual CEO`
 
-![Google Dork](01.googledork)
+![Google Dork](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-16%20Penetration%20Testing/Images/01.Google%20Dork.png)
 
 
 - How can this information be helpful to an attacker:
@@ -41,23 +41,23 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
 
 - What open ports and running services did Shodan find:
 
-![Open Ports](02.OpenPorts)
+![Open Ports](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-16%20Penetration%20Testing/Images/02.open_ports.png)
 
 #### Step 4: Recon-ng
 
 - Install the Recon module `xssed`. 
 
-![Install Recon Module](03Install Recon Module)
+![Install Recon Module](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-16%20Penetration%20Testing/Images/03.InstallReconModule.png)
 - Set the source to `demo.testfire.net`. 
-![Set Source](04.set source)
+![Set Source](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-16%20Penetration%20Testing/Images/04.Set%20Source.png)
 
 - Run the module. 
-![Run](05.Runthe Module)
+![Run](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-16%20Penetration%20Testing/Images/05.Run%20The%20Module.png)
 
 Is Altoro Mutual vulnerable to XSS: 
 
 Yes
-![Altoro Mutual Vulnerability](06.AltoroVulnerability)
+![Altoro Mutual Vulnerability](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-16%20Penetration%20Testing/Images/06.Altoro%20Vulnerability.png)
 
 
 
@@ -86,7 +86,7 @@ Your client has asked that you help identify any vulnerabilities with their file
 
     - If someone used the backdoor they would have a shell in the server where they could execute commands and access your data. 
 
-    ![Danger Score](07.Danger Score)
+    ![Danger Score](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-16%20Penetration%20Testing/Images/07.DangerScore.png)
 
   3. What mitigation strategies can you recommendations for the client to protect their server:
 
