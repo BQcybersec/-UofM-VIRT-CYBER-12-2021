@@ -1,6 +1,6 @@
 # Homework Unit 15 Web-Vulnerabilities and Hardening
 
-## Web Application 1: You Wish is My Command Injection
+## Web Application 1: Your Wish is My Command Injection
 
 ![DVWA](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-15%20Web-Vulnerabilities/Images/1.1%20DVWA.png)
 
