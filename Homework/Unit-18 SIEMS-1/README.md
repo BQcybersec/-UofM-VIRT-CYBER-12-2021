@@ -12,7 +12,7 @@ SPLUNK
 
     `source="server_speedtest.csv" |eval Ratio = 'DOWNLOAD_MEGABITS' / 'UPLOAD_MEGABITS' |table TEST_DATE IP_ADDRESS DOWNLOAD_MEGABITS UPLOAD_MEGABITS Ratio`
 
-    ![SpeedTest Report](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/01.SpeedTest%20Report.png)
+![SpeedTest Report](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/01.SpeedTest%20Report.png)
 
 #### Two Questions
 		1. Based on the report created, what is the approximate date and time of the attack?
@@ -27,15 +27,15 @@ SPLUNK
 
     `source="nessus_logs.csv" dest_ip="10.11.36.23" severity=critical`
 
-    ![create a report](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/02.createareport.png)
+![create a report](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/02.createareport.png)
 
-    ![report created](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/03.reportcreated.png)
+![report created](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/03.reportcreated.png)
 
 #### Build an Alert
 
-    ![build an alert](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/04.criticalvulnalert.png)
+![build an alert](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/04.criticalvulnalert.png)
 
-    ![critical vulnerabilities message](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/05.CriticalVulnMessage.png)
+![critical vulnerabilities message](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/05.CriticalVulnMessage.png)
 
 
 ### Step3:
@@ -52,11 +52,11 @@ SPLUNK
     
 #### Design an alert to check the threshold every hour and email the SOC team at SOC@vandalay.com if triggered.
 
-    ![design an alert](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/06.Design%20an%20Alert1.png)
+![design an alert](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/06.Design%20an%20Alert1.png)
 
-    ![design an alert](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/07.Designanalert2.png)
+![design an alert](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/07.Designanalert2.png)
     
-    ![design an alert](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/08.Designanalert3.png)
+![design an alert](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-18%20SIEMS-1/Images/08.Designanalert3.png)
 
 
 
