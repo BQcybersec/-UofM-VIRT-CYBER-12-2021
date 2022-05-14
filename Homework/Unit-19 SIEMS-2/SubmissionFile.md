@@ -9,10 +9,14 @@ Several users were impacted during the attack on March 25th.
 Based on the attack signatures, what mitigations would you recommend to protect each user account? 
 Provide global mitigations that the whole company can use and individual mitigations that are specific to each user.
 	
-        - Company Wide 
+##### Company Wide 
+  
+Normal User Activity
 
 ![baseline active users](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-19%20SIEMS-2/Images/01.BaselineActiveUsers.png)
+
 The attack shows a large increase in activity from select users
+
 ![attack active users](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-19%20SIEMS-2/Images/02.AttackActiveUsers.png)       
 
 ![baseline activity all users](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-19%20SIEMS-2/Images/03.baselineuseractivity.png)
@@ -33,13 +37,13 @@ One user was responsible for locking the accounts, locking them out would solve 
 
 ![password limit](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-19%20SIEMS-2/Images/07.password2.png) 
  
-		- A maximum limit of successful logins may also be needed, trigger an alert after 25 for notice of suspicious activity. 
+		- A maximum limit of successful logins may also be needed, trigger an alert after 25 Logins for notice of suspicious activity. 
 
 ![successfuly login](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-19%20SIEMS-2/Images/08.login1.png)
 
 ![successfuly login](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Homework/Unit-19%20SIEMS-2/Images/09.login2.png) 
 
-    - Individual Account Actions
+##### Individual Account Actions
         
         - I would reccomend all three of the accounts involved in the attack change their login credentials immediately.
 
@@ -48,7 +52,8 @@ One user was responsible for locking the accounts, locking them out would solve 
 VSI has insider information that JobeCorp attempted to target users by sending "Bad Logins" to lock out every user.
 What sort of mitigation could you use to protect against this?
 
-	- A single user per IP address would address this issue. That way a single attacker would be unable to shut every user out of their accounts. 
+	- A single user per IP address would address this issue. 
+          That way a single attacker would be unable to shut every user out of their accounts. 
         
         - Or changing all of the user names so the attackers wont have a pre-existing list of potential targets.
 
@@ -87,7 +92,7 @@ What other rules can you create to protect VSI from attacks against your webserv
 
 	- A threshold set by volume of traffic from an individual non-authorized IP address that can be triggered to block the IP address if it crosses the threshold.
         
-        -The IP count goes way up during the attack and several of the addresses are not present from the baseline let alone with that level of activity. 
+        - The IP count goes way up during the attack and several of the addresses are not present from the baseline let alone with that level of activity. 
 
 Baseline IP stats
 
