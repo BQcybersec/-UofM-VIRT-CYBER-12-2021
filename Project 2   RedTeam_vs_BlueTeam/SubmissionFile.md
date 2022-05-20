@@ -178,7 +178,8 @@ I based the assement off of the [2021 OWASP Top 10 Web Application Security Risk
 	2.How many packets were sent, and from which IP?
 		3:05: 30,716 packets were received
 		3:15: 32,430 packets were received
-		
+		From IP Address 192.168.1.90
+
 	3.What Indicates that this was a port scan?
 		- The unusual amount of irregular ports being used 
 		- The size of the packets each port received and 
@@ -237,11 +238,20 @@ I based the assement off of the [2021 OWASP Top 10 Web Application Security Risk
 	1.How many requests were made in the attack?
 		- 16,608
 	2.How many requests had been made before the attacker discovered the password?
-		- 16,556
+		- 16,606
 	3.Kibana SS's depicting the brute force attack
 		-Connections over time
 
 ![bruteforce1(29)](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/29.bruteforce1.png)
+Requesting 
+
+`url.path: "/company_folders/secret_folder"`
+
+Top is searching for the requests
+
+Bottom shows how many request returned with an "OK" status
+
+![uncoverbrute](uncoverbrute.png)
 
 
 #### Analysis: Finding the WebDAV Connection
