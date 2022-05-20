@@ -251,7 +251,7 @@ Top is searching for the requests
 
 Bottom shows how many request returned with an "OK" status
 
-![uncoverbrute](uncoverbrute.png)
+![uncoverbrute](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%202%20%20%20RedTeam_vs_BlueTeam/Images/uncvoerbrute.png)
 
 
 #### Analysis: Finding the WebDAV Connection
