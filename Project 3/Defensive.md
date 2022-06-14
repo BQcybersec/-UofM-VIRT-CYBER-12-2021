@@ -51,7 +51,7 @@ Excessive HTTP Errors is implemented as follows:
  
 
   ![excessive HTTP errors](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/blue.01.excessivehttperros.png)
-  ![excessive HTTP erros2](blue.05.httperrorsintime.png)
+  ![excessive HTTP erros2](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/blue.05.httperrorsintime.png)
 
 #### HTTP request size monitor
 HTTP request size monitor is implemented as follows:
