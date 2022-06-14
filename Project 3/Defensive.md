@@ -9,7 +9,7 @@
 
 ### Network Topology
 
-![network](network.jpg)
+![network](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/network.jpg)
 
 The following machines were identified on the network:
 - Target 1
