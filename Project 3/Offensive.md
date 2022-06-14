@@ -20,6 +20,7 @@ hypervisor
 
 ELK
 `nmap -sV 192.168.1.100`
+
 ![elk](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.03.nmap.elk.png)
 
 Capstone
@@ -64,14 +65,19 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 ![Flags1 and 2](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.06.flags1-2.png)
     - **Exploit Used**
+    - 
       - Nmap Ping Sweep of the entire network
           `Nmap -sP 192.168.1.1-255`
+
       - Nmap Service Scan of Target 1
           `Nmap -sV 192.168.1.110`
+
       - Wordpress Enumeration with wpscan
           `wpscan --url http://192.168.1.110/wordpress -eu`
-      - Was able to guess a password of one of the users and ssh
+
+      -I Was able to guess a password of one of the users and ssh
             `ssh michael@192.168.1.110`
+
   - `flag3.txt`
   ![flag3](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.13.flag3.png)
 
@@ -83,13 +89,16 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         `root:R@v3nSecurity`
         `mysql -u root -p`
 ![MySQL Login](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.08.MySQL-Login.png)
+       
         `select * from wp_users`
+
 ![mySQL hash extraction](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.09.mysqlhashextraction.png)
 
     - Using John the Ripper to crack the hashes
 ![John the Ripper](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.10.johntheripper.png)
 
   - `flag4.txt`
+
 ![flag4](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.14.flag4.png)
 
     -SSH into the system as steven. and check the sudo privileges. he can run python scripts so I ran a python script that escalates the user to the root level
