@@ -101,6 +101,6 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 ![flag4](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.14.flag4.png)
 
-    -SSH into the system as steven. and check the sudo privileges. he can run python scripts so I ran a python script that escalates the user to the root level
+  -SSH into the system as steven. and check the sudo privileges. he can run python scripts so I ran a python script that escalates the user to the root level
 
 ![Python Script](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.11.pythonscript.png)
