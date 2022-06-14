@@ -64,7 +64,8 @@ _TODO: Fill out the details below. Include screenshots where possible._
 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
-  - `flag1.txt` `flag2.txt`
+  
+- `flag1.txt` `flag2.txt`
 
 ![Flags1 and 2](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.06.flags1-2.png)
     - **Exploit Used**
@@ -81,11 +82,13 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       -I Was able to guess a password of one of the users and ssh
             `ssh michael@192.168.1.110`
 
-  - `flag3.txt`
+- `flag3.txt`
+- 
 ![flag3](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.13.flag3.png)
 
 - **Exploit Used**
     - Wordpress was not properly configured and the file wp-config.php could be viewed by any user. This allowed me to dump the data containing Root Login info for the MySQL database which contained hashed passwords for the users of the system.
+        
         `cat wp-config.php`
 
 ![WordPress Cat](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.07.wordpresscat.png)
