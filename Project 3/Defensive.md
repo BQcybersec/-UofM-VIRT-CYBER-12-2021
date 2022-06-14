@@ -48,9 +48,10 @@ Excessive HTTP Errors is implemented as follows:
   - **Metric**: If a server is firing off multiple 400 error codes
   - **Threshold**: 5 error codes in a one minute period of time
   - **Vulnerability Mitigated**: An excessive amount of failure codes would indicate that an attack is potentially occuring. 
-  - **Reliability**: This request did not work as intended and did not fire off any alerts. It merely showed the top 5 HTTP codes that the server was experiencing at a given time. It would however show an unusually high amount of web traffic, the 400 threshold was not for the 400 codes themselves but a threshold of the total count of all the codes created.  
+ 
 
-  ![excessive HTTP errors](blue.01.excessivehttperros.png)
+  ![excessive HTTP errors](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/blue.01.excessivehttperros.png)
+  ![excessive HTTP erros2](blue.05.httperrorsintime.png)
 
 #### HTTP request size monitor
 HTTP request size monitor is implemented as follows:
@@ -59,7 +60,7 @@ HTTP request size monitor is implemented as follows:
   - **Vulnerability Mitigated**: Unusual HTTP requests from the server
   - **Reliability**: This alert created a lot of false positives due to the size being to small. 
 
-  ![request size monitor](blue.02.requestsizemonitor.png)
+  ![request size monitor](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/blue.02.requestsizemonitor.png)
 
 #### CPU usage monitor
 CPU usage monitor is implemented as follows:
@@ -68,7 +69,7 @@ CPU usage monitor is implemented as follows:
   - **Vulnerability Mitigated**: This will notify the SOC if suspicious activity is occuring on a server that is utilizing above average resources. 
   - **Reliability**: I thought this was a good indicator of an attack, if the attack was using brute force or had a high demand of the server. It would not catch an attacker if they were being stealthy. 
 
-  ![Cpu Usage](blue.03.cpuusage.png)
+  ![Cpu Usage](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/blue.03.cpuusage.png)
 
 
 
