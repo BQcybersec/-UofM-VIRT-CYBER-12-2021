@@ -83,7 +83,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
             `ssh michael@192.168.1.110`
 
 - `flag3.txt`
-- 
+
 ![flag3](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.13.flag3.png)
 
 - **Exploit Used**
@@ -104,7 +104,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     - Using John the Ripper to crack the hashes
 ![John the Ripper](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.10.johntheripper.png)
 
-  - `flag4.txt`
+- `flag4.txt`
 
 ![flag4](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.14.flag4.png)
 
