@@ -6,12 +6,12 @@
 You must inspect your traffic capture to answer the following questions:
 
 1. What is the domain name of the users' custom site?
-    frank-n-ted.com
+    `frank-n-ted.com`
 2. What is the IP address of the Domain Controller (DC) of the AD network?
-    10.6.12.12
+    `10.6.12.12`
 ![sourcenameandip](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/network.01.domainnameandip.png)
 3. What is the name of the malware downloaded to the 10.6.12.203 machine?
-    june11.dll
+    `june11.dll`
 ![nameofmalware](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/network.02.nameofmalware.png)
 ![downloadingmalware](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/network.03.downloadingmalware.png)
 ![downloadedmalware](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/network.04.downloadedmalware.png)
@@ -21,7 +21,7 @@ You must inspect your traffic capture to answer the following questions:
 
 5. What kind of malware is this classified as?
 
-A trojan
+`A trojan`
 ![trogan](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/network.06.trojan.png)
 
 ---
