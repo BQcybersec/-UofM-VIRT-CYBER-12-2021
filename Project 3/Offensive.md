@@ -16,6 +16,7 @@ Nmap Service Scans of the network
 
 hypervisor
 `nmap -sV 192.168.1.1`
+
 ![red.o2.hypemachine](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.02.nmap.hyperviser.png)
 
 ELK
@@ -25,11 +26,13 @@ ELK
 
 Capstone
 `nmap -sV 192.168.1.105`
+
 ![capstone](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.04.nmap.capstone.png)
 
 
 Target 1
 `nmap -sV 192.168.1.110`
+
 ![Target1](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.05.nmap.target1.png)
 
 This scan identifies the services below as potential points of entry:
@@ -79,11 +82,12 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
             `ssh michael@192.168.1.110`
 
   - `flag3.txt`
-  ![flag3](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.13.flag3.png)
+![flag3](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.13.flag3.png)
 
     - **Exploit Used**
-      - _Wordpress was not properly configured and the file wp-config.php could be viewed by any user. This allowed me to dump the data containing Root Login info for the MySQL database which contained hashed passwords for the users of the system.
+      - Wordpress was not properly configured and the file wp-config.php could be viewed by any user. This allowed me to dump the data containing Root Login info for the MySQL database which contained hashed passwords for the users of the system.
         `cat wp-config.php`
+
 ![WordPress Cat](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.07.wordpresscat.png)
 
         `root:R@v3nSecurity`
