@@ -42,6 +42,7 @@ This scan identifies the services below as potential points of entry:
 
 
 The following vulnerabilities were identified on each target:
+
 - Target 1
   - List of
   - Critical
@@ -60,7 +61,7 @@ Broken Access Control:
 
 
 ### Exploitation
-_TODO: Fill out the details below. Include screenshots where possible._
+
 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
@@ -68,8 +69,9 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 - `flag1.txt` `flag2.txt`
 
 ![Flags1 and 2](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.06.flags1-2.png)
+    
     - **Exploit Used**
-    - 
+     
       - Nmap Ping Sweep of the entire network
           `Nmap -sP 192.168.1.1-255`
 
