@@ -1,6 +1,6 @@
 # Network Forensic Analysis Report
 
-_TODO_ Complete this report as you complete the Network Activity on Day 3 of class.
+
 
 ## Time Thieves 
 You must inspect your traffic capture to answer the following questions:
@@ -30,16 +30,20 @@ A trojan
 
 1. Find the following information about the infected Windows machine:
     - Host name: Rotterdam-PC.mind-hammer.net
+  
 ![hostname](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/network.07.hostname.png)  
 
     - IP address: 172.16.4.205
+  
 ![ipadd](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/network.08.ipadd.png)
 
     - MAC address: 00:59:07:b0:63:a4
+  
 ![macadd](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/network.09.macadd.png)
     
-2. What is the username of the Windows user whose computer is infected?
-matthijs.devries
+1. What is the username of the Windows user whose computer is infected?
+
+`matthijs.devries`
 
 `ip.src==172.16.4.205 && kerberos.CNameString`
 
@@ -60,9 +64,9 @@ matthijs.devries
 ## Illegal Downloads
 
 1. Find the following information about the machine with IP address `10.0.0.201`:
-    - MAC address: 00:16:17:18:66:c8
-    - Windows username: elmer.blanco
-    - Computer host name: BLANCO-DESKTOP
+    - MAC address: `00:16:17:18:66:c8`
+    - Windows username: `elmer.blanco`
+    - Computer host name: `BLANCO-DESKTOP`
 `ip.addr==10.0.0.201 && kerberos.CNameString`
 ![torrenttraffic](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/network.14.torrenttraffic.png)
 
