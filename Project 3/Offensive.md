@@ -84,8 +84,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   - `flag3.txt`
 ![flag3](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.13.flag3.png)
 
-    - **Exploit Used**
-      - Wordpress was not properly configured and the file wp-config.php could be viewed by any user. This allowed me to dump the data containing Root Login info for the MySQL database which contained hashed passwords for the users of the system.
+- **Exploit Used**
+    - Wordpress was not properly configured and the file wp-config.php could be viewed by any user. This allowed me to dump the data containing Root Login info for the MySQL database which contained hashed passwords for the users of the system.
         `cat wp-config.php`
 
 ![WordPress Cat](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.07.wordpresscat.png)
