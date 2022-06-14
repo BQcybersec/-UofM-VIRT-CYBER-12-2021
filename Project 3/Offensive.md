@@ -71,7 +71,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 ![Flags1 and 2](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/red.06.flags1-2.png)
     
     - **Exploit Used**
-     
+
+   
       - Nmap Ping Sweep of the entire network
           `Nmap -sP 192.168.1.1-255`
 
