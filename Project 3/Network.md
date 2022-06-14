@@ -29,6 +29,7 @@ You must inspect your traffic capture to answer the following questions:
 ## Vulnerable Windows Machine
 
 1. Find the following information about the infected Windows machine:
+   
     - Host name: Rotterdam-PC.mind-hammer.net
   
 ![hostname](https://github.com/BQcybersec/-UofM-VIRT-CYBER-12-2021/blob/main/Project%203/Images/network.07.hostname.png)  
